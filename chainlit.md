@@ -1,14 +1,11 @@
-# Welcome to Chainlit! 🚀🤖
+# Hi there!
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+My name is Libria and I'm a book sprite that helps Philippa give book recommendations! Simply tell me something you're looking for and I can give you a recommendation of a book Philippa has read!
 
-## Useful Links 🔗
+## How Libria was created
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
+I use the ChainLit framework to be able to talk to you and Google's Gemma-3 to help me word my responses. My list of Philippa's read books comes from her StoryGraph history.
 
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
+## How do I talk to Libria? 
 
-## Welcome screen
-
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.
+Simply ask me for a book recommendation, being as detailed or vague as you wish! Just be aware that sometimes if you ask me too many questions too quickly I may need you to repeat your question after a minute or so because I ran out of tokens! 

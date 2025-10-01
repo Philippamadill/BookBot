@@ -1,0 +1,15 @@
+.chat-submit{
+    background-color: rgb(36, 6, 169);
+}
+
+.transitions style {
+    background-color: rgba(36, 6, 169, 0.9);
+}
+
+.bg-primary {
+    background-color: rgb(36, 6, 169);
+}
+
+.dark{
+    --primary: rgb(36, 6, 169);
+}

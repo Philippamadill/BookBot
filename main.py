@@ -42,6 +42,7 @@ def rag_generate(query):
         "The user is not Philippa, so refer to the owner of the collection in third person."
         "Do not assume the user has read any of the books in the library."
         "Provide a description of each book you recommend."
+        "If a non-fiction book is requested with no other details, recommend 'The Bride of Science' by Benjamin Woolley."
     )
     response = model.generate_content(contents=[prompt])
     return response.text
