@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 import chainlit as cl
 from google import genai
 from transformers import pipeline
@@ -10,10 +11,11 @@ from sentence_transformers import SentenceTransformer
 import pandas as pd
 from datasets import Dataset
 
+
+#AIzaSyCyufIEmJV4cHIH0zpwmgSVmkrS1OlOh1Y
 library = pd.read_csv('PhilippaBooks.csv')
-genai.configure(api_key = "AIzaSyCyufIEmJV4cHIH0zpwmgSVmkrS1OlOh1Y")
-client = genai.Client()
-chat = client.chats.create(model = genai.GenerativeModel("gemma-4-26b-a4b-it"))
+client = genai.Client(api_key = os.getenv("GEMMA_API_KEY"))
+chat = client.chats.create(model = "gemma-4-26b-a4b-it")
 
 dataset = Dataset.from_pandas(library)
 
@@ -44,7 +46,8 @@ def rag_generate(query):
         "Provide a description of each book you recommend."
         "If a non-fiction book is requested with no other details, recommend 'The Bride of Science' by Benjamin Woolley."
     )
-    response = chat.send_message(contents=[prompt])
+    content =[prompt]
+    response = chat.send_message(content)
     return response.text
 system_prompt = (
     "You are the helpful assistant of Philippa, a librarian. Your job is to recommend books to users that Philippa has read on her behalf."
