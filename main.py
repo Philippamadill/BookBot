@@ -4,15 +4,12 @@ import os
 import chainlit as cl
 from google import genai
 from transformers import pipeline
-"""from huggingface_hub import login
-login()(token="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")"""
 import torch
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 from datasets import Dataset
 
 
-#AIzaSyCyufIEmJV4cHIH0zpwmgSVmkrS1OlOh1Y
 library = pd.read_csv('PhilippaBooks.csv')
 client = genai.Client(api_key = os.getenv("GEMMA_API_KEY"))
 chat = client.chats.create(model = "gemma-4-26b-a4b-it")
